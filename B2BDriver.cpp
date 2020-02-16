@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "Customer.h"
 #include "Address.h"
 #include "Product.h"
@@ -8,6 +9,10 @@ using namespace std;
 
 int main()
 {
+  
+ifstream myIn ("customers.dat");
+ifstream myIn2 ("inventory.dat");  
+ofstream myOut ("abc");      
 
 cout << "--------------------------------------------------" << endl;
 cout << "B2B Shopping Cart << endl;
