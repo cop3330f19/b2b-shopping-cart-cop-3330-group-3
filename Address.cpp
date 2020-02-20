@@ -10,7 +10,13 @@ Address::Address(string sa, string c, string s, string z)
     state=s;
     zipCode=z;
 } 
-Address::Address(){}
+Address::Address()
+{
+    streetAddress="";
+    city="";
+    state="";
+    zipCode="";    
+}
 
 //Get Functions
 string Address::getstreetAddress(){return streetAddress;}
