@@ -25,5 +25,13 @@ string Customer::getCustomer()
 
 //Set Functions
 void Customer::setcustomerNum(string cnu){customerNum=cnu;}
-void Customer::setcustomerName(string cna){customerName=cna;}
+void Customer::setcustomerName(string cna)
+{customerName=cna;
+ifstream inFile;
+        inFile.open("customers.dat");
+        if (!inFile)
+        {
+            cout << "Invalid Customer Name.";
+        }
+}
 void Customer::setlineOfCredit(double l){lineOfCredit=l;}
