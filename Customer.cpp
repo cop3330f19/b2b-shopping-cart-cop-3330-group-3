@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Customer.h"
+#include <fstream>
 using namespace std;
 
 //Constructors
