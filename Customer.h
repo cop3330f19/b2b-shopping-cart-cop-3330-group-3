@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #include "Address.h"
 
  class Customer
@@ -9,13 +10,21 @@
      Address * corperateAddress;
      
      public:
+     //Class constructors
      Customer(std::string, std::string, double);
      Customer();
+     
+     //Class vectors
+     std::vector<Customer> cust;
+     std::vector<Address> addy;
      
      //Get Functions
      std::string getcustomerNum();
      std::string getcustomerName();
      double getlineOfCredit();
+     
+     //Receive from file Function
+     void grabcustomer();
      
      //Print Function
      std::string getCustomer();
