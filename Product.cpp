@@ -1,6 +1,8 @@
+#include <string>
 #include <fstream>
 #include <iostream>
 #include "Product.h"
+#include <vector>
 using namespace std;
 
     //Constructors
@@ -11,7 +13,14 @@ using namespace std;
         price=p;
         stockQuantity=s;
     }
-    Product::Product(){}
+    Product::Product()
+    {
+        /*
+        itemNo=0;
+        description="";
+        price=0;
+        stockQuantity=0; */   
+    }
 
     //Get Function
     int Product::getitemNo(){return itemNo;}
@@ -19,12 +28,15 @@ using namespace std;
     double Product::getprice(){return price;}
     int Product::getstockQuantity(){return stockQuantity;}
     
-    //Print Function
-    void Product::getProduct()
+    //Receive from file Function
+    void Product::grabinfo()
     {
-        string size, type;
+        int itemNo, stockQuantity;
+        double price;
+        string size, type, description;
         char c;
         
+        vector<Product> products;
         ifstream inFile;
         inFile.open("inventory.dat");
         if(inFile.is_open())
@@ -36,11 +48,24 @@ using namespace std;
                getline(inFile, type, ','); 
                inFile >> price >> c >> stockQuantity;
                description= size + " " +type;
-               cout << itemNo << endl << description << endl << price << endl << stockQuantity << endl;  
+               Product one(itemNo, description, price, stockQuantity);
+               products.push_back(one);
+               //cout << itemNo << "," << description << "," << price << "," << stockQuantity << endl;
            } 
         }    
         inFile.close();
+        product=products;
     }
+    
+    //Print Function
+    string Product::getProduct()
+    {
+        string itemNo=(string) itemNo;
+        string stockQuantity= (string) stockQuantity;
+        string price= (string) price;
+        return itemNo+description+""+stockQuantity+price+"";
+    }
+
     //Set Function
     void Product::setitemNo(int i){itemNo=i;}
     void Product::setdescription(string d){description=d;}
