@@ -20,6 +20,15 @@ string generateOrderNum()
 
 int main()
 { 
+//Variables for Customer
+string cName, cNum;
+double loc; 
+
+//Variables for Product
+int iNum, sQuant;
+string descript;
+double pri;	
+   
     Address a;
     Customer c;
     Product p;
@@ -40,6 +49,14 @@ int main()
     {
        if(prod[i].getcustomerName()==cusname)
     }
+
+cin >> cName;
+customer.setcustomerName(cName);
+
+cin >> iNum >> sQuant;
+
+customer.setitemNo(iNum);
+customer.setstockQuantity(sQuant);
     
     //associate enters name 
     //associate looks up the customer
