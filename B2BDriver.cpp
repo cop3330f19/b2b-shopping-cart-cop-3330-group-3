@@ -59,8 +59,23 @@ customer.setitemNo(iNum);
 customer.setstockQuantity(sQuant);
     
     //associate enters name 
+   if(asc == customer)
+   {
+       cout << "AssociateName :" << endl;
+   }
+       else 
+      return menu;
     //associate looks up the customer
+    if(customer == cusname )
+        else 
+            return menu;
     //associate enters selected items/quantities
+    if(quantities == setitemNo)
+    {
+        for( int =i ; i= 0; i--)
+    }
+        else
+            return menu;
     
     /*string asc;
     cout << "Who are you(Associate Name)? ";
