@@ -14,79 +14,81 @@ string generateOrderNum()
     stringstream strstream;
     strstream << now;
     strstream >> oNum;
-    return oNum;    
+    return oNum;
 }
 
 
 int main()
-{ 
-//Variables for Customer
-string cName, cNum;
-double loc; 
+{
+    //Variables for Customer
+    string cName, cNum;
+    double loc;
 
-//Variables for Product
-int iNum, sQuant;
-string descript;
-double pri;	
-   
+    //Variables for Product
+    int iNum, sQuant;
+    string descript;
+    double pri;
+
     Address a;
     Customer c;
     Product p;
-    
+
     p.grabinfo();
-    vector<Product> prod=p.product;
-    
+    vector<Product> prod = p.product;
+
     c.grabcustomer();
-    vector <Customer> cust=c.cust;
-    
-    vector <Address> addresses
-    
-    for(int i=0; i<cust.size(); i++)
+    vector <Customer> cust = c.cust;
+
+    vector <Address> addresses;
+
+        for (int i = 0; i < cust.size(); i++)
+        {
+            cout << cust[i].getcustomerName() << endl;
+        }
+    for (int i = 0; i < prod.size(); i++)
     {
-        cout << cust[i].getcustomerName() << endl;
-    } 
-    for (int i=0; i<prod.size(); i++)
-    {
-       if(prod[i].getcustomerName()==cusname)
+        if (prod[i].getcustomerName() == cName)
     }
 
-cin >> cName;
-customer.setcustomerName(cName);
+    cin >> cName;
+    customer.setcustomerName(cName);
 
-cin >> iNum >> sQuant;
+    cin >> iNum >> sQuant;
 
-customer.setitemNo(iNum);
-customer.setstockQuantity(sQuant);
-    
+    customer.setitemNo(iNum);
+    customer.setstockQuantity(sQuant);
+
     //associate enters name 
-   if(asc == customer)
-   {
-       cout << "AssociateName :" << endl;
-   }
-       else 
-      return menu;
-    //associate looks up the customer
-    if(customer == cusname )
-        else 
-            return menu;
-    //associate enters selected items/quantities
-    if(quantities == setitemNo)
+    string asc;
+
+    if (asc == customer)
     {
-        for( int =i ; i= 0; i--)
+        cout << "AssociateName :" << endl;
     }
-        else
-            return menu;
-    
-    /*string asc;
+    else
+        return ;
+    //associate looks up the customer
+    if (customer == cName)
+    else
+        return ;
+    //associate enters selected items/quantities
+    if (sQuant == iNum)
+    {
+        for (int = i; i = 0; i--)
+    }
+    else
+        return ;
+
+    string asc;
     cout << "Who are you(Associate Name)? ";
-    cin >> asc;*/
+    cin >> asc;
+
+
     
-    
-    /*
     cout << "Order Number: " << generateOrderNum()<< endl;
-    cout << "Associate: " << asc << endl; 
+    cout << "Associate: " << asc << endl;
     cout << "Customer Number: " << endl;
     cout << "Costumer: " << endl;
-    cout << "Address: " << endl; */
-	return 0;
+    cout << "Address: " << endl; 
+    return 0;
 }
