@@ -50,14 +50,7 @@ int main()
         if (prod[i].getcustomerName() == cName)
     }
 
-    cin >> cName;
-    customer.setcustomerName(cName);
-
-    cin >> iNum >> sQuant;
-
-    customer.setitemNo(iNum);
-    customer.setstockQuantity(sQuant);
-
+   
     //associate enters name 
     string asc;
 
@@ -92,3 +85,11 @@ int main()
     cout << "Address: " << endl; 
     return 0;
 }
+cin >> cName;
+    customer.setcustomerName(cName);
+
+    cin >> iNum >> sQuant;
+
+    customer.setitemNo(iNum);
+    customer.setstockQuantity(sQuant);
+
