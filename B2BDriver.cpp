@@ -104,5 +104,28 @@ int main()
         if (flag==true)
             break;
     }
+//sending information to file
+    string dash= "-----------------------------------------------";
+   ofstream file;
+    file.open("shoppingcart.txt");
+    file << dash+"\n B2B Shopping Cart \n"+dash+"\n";
+    file << "Order Number: " +generateOrderNum()+"\n";
+    file << "Customer Number: " +custo[indcus].getcustomerNum() +"\n";
+    file << "Customer: " + custo[indcus].getcustomerName() +"\n";
+    file << "Address: " + add[indcus].getstreetAddress()+" |\n"+add[indcus].getcity()+", "+add[indcus].getstate()+" "+add[indcus].getzipCode();
+    file << "\n"+dash+"\n";
+    file << "Item No      Description          Qty     Total";
+    file << "\n"+dash+"\n";
+    for (int i=0; i<transact.size(); i++)
+    {
+        file << transact[i].getitemNo()<<"      "<< transact[i].getdescription()<<"          "
+            <<transact[i].getstockQuantity()<<"     "<<transact[i].getprice()<<"\n";
+    }
+    file << dash+"\n";
+    file << "Total                                   "<<total<<"\n";
+    file << dash+"\n";
+    file << "Remaining Credit                        "<<custo[indcus].getlineOfCredit();
+    file.close();
+return 0;
 
 
