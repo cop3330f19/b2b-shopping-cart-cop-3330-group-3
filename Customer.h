@@ -1,3 +1,10 @@
+/*
+Customer.h
+Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
+Date Last Edited: 02/25/20
+Purpose:
+*/
+
 #include <string>
 #include <vector>
 #include "Address.h"
