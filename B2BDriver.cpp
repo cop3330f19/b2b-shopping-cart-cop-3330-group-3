@@ -76,7 +76,43 @@ int main()
     cout << "Who are you(Associate Name)? ";
     cin >> asc;
 
-
+      //associate enters selected items
+    double total=0;
+    flag=false;
+    while(true)
+    {
+       cout << "What item # of the item that was used in the transaction?(Enter 0000 to STOP) ";
+       cin >> itnu;    
+        for (int i=0; i<prod.size(); i++)
+        {
+            if (itnu==0000)
+            {
+                flag=true;
+            }
+            if(itnu==prod[i].getitemNo()) //verifies if the item number exists in the file
+            {
+                cout << "What was the quantity purchased? ";
+                cin >> quan;
+                if (quan<=prod[i].getstockQuantity()) //verifies if there is enough of the item to satisfy the quantity
+                {
+                    indpro=i;
+                    total+=(quan*prod[i].getprice()); //updates the total price of transaction
+                    prod[i].setstockQuantity(prod[i].getstockQuantity()-quan); //updates stock during transaction
+                    custo[indcus].setlineOfCredit(custo[indcus].getlineOfCredit()-(quan*prod[i].getprice())); //updates the customer's line of credit
+                    Product tr(prod[i].getitemNo(), prod[i].getdescription(), prod[i].getprice(), prod[i].getstockQuantity());
+                    transact.push_back(tr);
+                    break;
+                } 
+                else 
+                {
+                    cout << "Sorry! Re-enter available item and quantity " <<endl;
+                }
+            }
+            //cout << "The final total is " <<prod[i].getitemNo() << " is " << total <<endl;
+        }
+        if (flag==true)
+            break;
+    }
     
     cout << "Order Number: " << generateOrderNum()<< endl;
     cout << "Associate: " << asc << endl;
@@ -85,11 +121,5 @@ int main()
     cout << "Address: " << endl; 
     return 0;
 }
-cin >> cName;
-    customer.setcustomerName(cName);
 
-    cin >> iNum >> sQuant;
-
-    customer.setitemNo(iNum);
-    customer.setstockQuantity(sQuant);
 
