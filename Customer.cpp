@@ -2,7 +2,7 @@
 Customer.cpp
 Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
 Date Last Edited: 02/25/20
-Purpose:
+Purpose:To recieve the customers information.
 */
 
 #include <iostream>
