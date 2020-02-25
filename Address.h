@@ -2,7 +2,7 @@
 Address.h
 Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
 Date Last Edited: 02/25/20
-Purpose:
+Purpose: To store our set and get funtions for our source code file Address.cpp
 */
 
 #include <string>
