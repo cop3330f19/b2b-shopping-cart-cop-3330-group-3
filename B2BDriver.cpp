@@ -2,7 +2,7 @@
 B2BDriver.cpp
 Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
 Date Last Edited: 02/25/20
-Purpose:
+Purpose: To test our classes in the program.
 */
 
 #include <ctime>
