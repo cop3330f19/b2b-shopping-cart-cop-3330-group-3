@@ -2,7 +2,7 @@
 Product.cpp
 Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
 Date Last Edited: 02/25/20
-Purpose:
+Purpose: to establish the constructers and get and return the functions.
 */
 
 #include <string>
