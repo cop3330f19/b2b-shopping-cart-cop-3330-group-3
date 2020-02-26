@@ -2,7 +2,7 @@
 Customer.h
 Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
 Date Last Edited: 02/25/20
-Purpose:
+Purpose: To set and get functions of the customer.
 */
 
 #include <string>
