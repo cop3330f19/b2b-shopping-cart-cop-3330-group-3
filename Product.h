@@ -2,7 +2,7 @@
 Product.h
 Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
 Date Last Edited: 02/25/20
-Purpose:
+Purpose: To Set and Get the functions of the products purchased.
 */
 
 #include <string>
